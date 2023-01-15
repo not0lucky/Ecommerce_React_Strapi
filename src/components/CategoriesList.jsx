@@ -8,14 +8,14 @@ function CategoriesList() {
     const [categories,setCategories] = useState('')
     const [loading, setLoading] = useState(true)
 
-    console.log('categoriesss', categories)
+    const params = "/api/categories?populate=*"
 
   useEffect(()=>{
     getCategories()
   },[])
 
   const getCategories= async() => {
-    const api = await fetchDataFromApi("/api/categories?populate=*")
+    const api = await fetchDataFromApi(params)
     console.log(api)
     setCategories(api.data)
     setLoading(false)

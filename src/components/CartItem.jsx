@@ -1,14 +1,11 @@
-import React, {useContext} from 'react'
-import { Context } from '../utils/context'
+import React from 'react'
 import { MdClose } from "react-icons/md";
 import styled from 'styled-components'
 import { useSelector,useDispatch } from 'react-redux'
-import {clear,del} from '../store/cart';
+import {del} from '../store/cart';
 
 function CartItem() {
 
-    const {  handleRemoveFromCart, handleCartProductQuantity } = useContext(Context);
-    const STRAPI_URL="http://localhost:1337"
     const dispatch = useDispatch()
     const cartItems = useSelector((state)=> state.cart.cartItems)
 

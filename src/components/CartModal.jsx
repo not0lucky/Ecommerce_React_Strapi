@@ -4,15 +4,18 @@ import styled,{keyframes} from 'styled-components'
 import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
 import { Context } from '../utils/context'
-import { useSelector } from 'react-redux'
+import { useSelector,useDispatch } from 'react-redux'
+import {clear} from '../store/cart';
+
 
 
 
 function CartModal() {
     const style = { fontSize: "1.5em" }
     const style1 = {fontSize:"120px", opacity:"0.1"}
-    const { setShowCart,cartSubTotal  } = useContext(Context);
+    const { setShowCart  } = useContext(Context);
     
+    const dispatch = useDispatch()
     const cartItems = useSelector((state)=> state.cart.cartItems)
     const totalPrice = useSelector((state)=> state.cart.totalPrice)
 
@@ -55,11 +58,17 @@ function CartModal() {
                                     ${totalPrice}
                                 </span>
                             </div>
+                             <div className="button">
+                                <button className="checkout-cta" onClick={()=> dispatch(clear())}>
+                                    Clear
+                                </button>
+                            </div>
                             <div className="button">
                                 <button className="checkout-cta">
                                     Checkout
                                 </button>
                             </div>
+                           
                         </div>
                     </CartFooter>
                 ): null}

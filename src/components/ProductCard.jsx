@@ -3,13 +3,12 @@ import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 function ProductCard({id,data}) {
-  const STRAPI_URL="http://localhost:1337"
   const navigate = useNavigate()
 
   return (
     <ProdCard onClick={()=>navigate("/product/"+id)}>
     <Thumbnail>
-      <ThumbnailImg src={STRAPI_URL + data.Picture.data.attributes.url}/>
+      <ThumbnailImg src={import.meta.env.VITE_STRAPI_URL + data.Picture.data.attributes.url}/>
     </Thumbnail>
     <ProdDetail>
       <Title>{data.Title}</Title>

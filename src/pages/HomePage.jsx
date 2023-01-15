@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { CategoriesList,ProductCatalog } from '../components'
 import styled from 'styled-components'
 

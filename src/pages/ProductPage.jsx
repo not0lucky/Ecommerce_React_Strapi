@@ -13,7 +13,7 @@ function ProductPage() {
   const [title,setTitle] = useState('')
   const [price,setPrice] = useState('')
   const [img, setImg] = useState('')
-  const STRAPI_URL="http://localhost:1337"
+  
   let Pro
   const dispatch = useDispatch()
 
@@ -30,7 +30,7 @@ function ProductPage() {
     Pro = api.data[0]
    setTitle(Pro.attributes.Title)
     setPrice(Pro.attributes.Price)
-    setImg(STRAPI_URL + Pro.attributes.Picture.data.attributes.url)
+    setImg(import.meta.env.VITE_STRAPI_URL + Pro.attributes.Picture.data.attributes.url)
     console.log('print title', Pro.attributes.Title)
   }
 
@@ -42,7 +42,7 @@ function ProductPage() {
         <Countainer>
           <Left>
 
-            { <img src={STRAPI_URL + product.data[0].attributes.Picture.data.attributes.url}/> }
+            { <img src={import.meta.env.VITE_STRAPI_URL + product.data[0].attributes.Picture.data.attributes.url}/> }
           </Left>
           <Right>
             <Title>{product.data[0].attributes.Title}</Title>

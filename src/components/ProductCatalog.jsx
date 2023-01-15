@@ -10,7 +10,7 @@ function ProductCatalog() {
   const [products,setProducts] = useState('')
   const [loading, setLoading] = useState(true)
   
-
+  console.log(import.meta.env.VITE_KEY)
 
    
 
