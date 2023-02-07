@@ -43,8 +43,10 @@ background-color: #f8f9fa;
 
   @media (max-width: 768px) {
     width: 100%;
-
+    
   }
+
+  
 `
 
 const Inside = styled.div`
@@ -56,6 +58,10 @@ const Inside = styled.div`
   @media (max-width: 768px) {
     width: 85%;
     
+  }
+
+  @media (max-width: 1200px) {
+    width: 90%;
   }
 `
 const CartIcon = styled.div`

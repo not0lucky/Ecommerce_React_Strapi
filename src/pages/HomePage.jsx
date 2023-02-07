@@ -26,6 +26,9 @@ const Layout = styled.div`
     width: 100%;
 
   }
+  @media (max-width: 1100px) {
+    width: 90%;
+  }
 `
 
 export default HomePage

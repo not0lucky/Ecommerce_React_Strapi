@@ -44,14 +44,21 @@ const Categories = styled.div`
     margin-top: 40px;
     margin-bottom: 80px;
     display: flex;
+   
     gap: 20px;
 
     @media (max-width: 768px) {
     width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 30px;
+  }
+  @media (max-width: 1200px) {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
     
 `
