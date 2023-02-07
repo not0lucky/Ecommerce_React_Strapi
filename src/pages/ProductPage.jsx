@@ -80,6 +80,15 @@ const Countainer = styled.div`
     justify-content: center;
   }
   
+  @media (max-width: 1200px) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+  }
 `
 
 const Left = styled.div`
