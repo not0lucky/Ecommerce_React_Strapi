@@ -2,20 +2,26 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
-function ProductCard({id,data}) {
+function ProductCard({id,dis}) {
   const navigate = useNavigate()
 
+  //console.log('dataaa',dis.Picture.data.id)
+  //const img = dis.Picture.data.attributes.url
+
   return (
+    <>
+    { dis &&
     <ProdCard onClick={()=>navigate("/product/"+id)}>
     <Thumbnail>
-      <ThumbnailImg src={import.meta.env.VITE_STRAPI_URL + data.Picture.data.attributes.url}/>
+         <ThumbnailImg src={dis.Picture.data.attributes.url}/> 
     </Thumbnail>
     <ProdDetail>
-      <Title>{data.Title}</Title>
-      <Price>${data.Price}</Price>
+      <Title>{dis.Title}</Title>
+      <Price>${dis.Price}</Price>
     </ProdDetail>
 
-    </ProdCard>
+    </ProdCard>}
+    </>
   )
 }
 

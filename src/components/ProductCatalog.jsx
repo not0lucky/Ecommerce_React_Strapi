@@ -31,10 +31,10 @@ function ProductCatalog() {
      <Countainer>
         <Title>Products </Title>
          <ProductList>
-        { loading == false && products.map((item)=>(
-          <ProductCard key={item.id} id={item.id} data={item.attributes} />
+        { loading == false & products.length > 0 ? products.map((item)=>(
+          <ProductCard key={item.id} id={item.id} dis={item.attributes} />
 
-        ))}
+        )) : null }
       </ProductList>
       </Countainer>
     </>

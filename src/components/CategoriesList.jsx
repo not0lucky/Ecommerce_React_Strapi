@@ -31,7 +31,7 @@ function CategoriesList() {
         <Title>Categories</Title>
         <Categories>
         { loading == false? categories.map((item)=>(
-            <CategoryCard key={item.attributes.title} title={item.attributes.title} image={item.attributes.image.data.attributes.url} />
+            <CategoryCard key={item.attributes.title} title={item.attributes.title} image={item.attributes.Picture.data.attributes.url} />
         )): null}
         </Categories>
     </Countainer>

@@ -9,7 +9,7 @@ function CartItem() {
     const dispatch = useDispatch()
     const cartItems = useSelector((state)=> state.cart.cartItems)
 
-    console.log('cart item type', typeof cartItems)
+    console.log('cart item type', cartItems)
 
   return (
     <>

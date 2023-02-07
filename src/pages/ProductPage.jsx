@@ -30,7 +30,7 @@ function ProductPage() {
     Pro = api.data[0]
    setTitle(Pro.attributes.Title)
     setPrice(Pro.attributes.Price)
-    setImg(import.meta.env.VITE_STRAPI_URL + Pro.attributes.Picture.data.attributes.url)
+    setImg(Pro.attributes.Picture.data.attributes.url)
     console.log('print title', Pro.attributes.Title)
   }
 
@@ -42,7 +42,7 @@ function ProductPage() {
         <Countainer>
           <Left>
 
-            { <img src={import.meta.env.VITE_STRAPI_URL + product.data[0].attributes.Picture.data.attributes.url}/> }
+            { <img src={product.data[0].attributes.Picture.data.attributes.url}/> }
           </Left>
           <Right>
             <Title>{product.data[0].attributes.Title}</Title>
@@ -108,7 +108,7 @@ const Right = styled.div`
   width: 550px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //align-items: center;
 
 
   @media (max-width: 768px) {

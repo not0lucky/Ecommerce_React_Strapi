@@ -3,7 +3,7 @@ import { Context } from '../utils/context'
 import styled from 'styled-components'
 
 function CategoryCard({title,image}) {
-        const STRAPI_URL="http://localhost:1337"
+        
         const [category,setCategory] = useState(Context)
        // const [productList, setProductList] = useState(Context)
 
@@ -16,7 +16,7 @@ function CategoryCard({title,image}) {
     <>
         <Countainer onClick={()=> FilterCategory(title)}>
             
-            <Img src={STRAPI_URL + image}/>
+            <Img src={image}/>
           
          
         </Countainer>
