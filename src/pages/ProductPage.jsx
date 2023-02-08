@@ -82,11 +82,9 @@ const Countainer = styled.div`
   
   @media (max-width: 1200px) {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 40px;
     
   }
 `
