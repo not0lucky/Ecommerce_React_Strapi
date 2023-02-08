@@ -69,7 +69,7 @@ const Layout = styled.div`
 const Countainer = styled.div`
   display: flex;
   width: 1200px;
-  margin:100px 0;
+  margin:100px 0px;
   flex-direction: row;
   justify-content: space-between;
 
