@@ -1,9 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useNavigate } from 'react-router-dom'
 import { fetchDataFromApi } from '../utils/api'
 import { useEffect, useState } from 'react'
 
 function Hero() {
+
+  const navigate = useNavigate()
+
+  //let id 
+
   const [product,setProduct] = useState('')
   const [loading,setLoading] = useState(true)
 
@@ -16,6 +22,7 @@ function Hero() {
     console.log(api)
     setProduct(api.data)
     console.log('productsss', product)
+    //id =  product.id
     setLoading(false)
   }
 
@@ -30,7 +37,7 @@ function Hero() {
         <Content>
           <p>{product.attributes.Title}</p>
           <Price>${product.attributes.Price}</Price>
-          <CheckBut>Buy Now</CheckBut>
+          <CheckBut onClick={()=>navigate("/product/"+product.id)}>Buy Now</CheckBut>
         </Content>
       </Left>
       <Right>
