@@ -1,5 +1,5 @@
 import React from 'react'
-import { CategoriesList,ProductCatalog } from '../components'
+import { CategoriesList,ProductCatalog, Hero } from '../components'
 import styled from 'styled-components'
 
 function HomePage() {
@@ -9,6 +9,7 @@ function HomePage() {
   return (
     <>
     <Layout>
+      <Hero/>
       <CategoriesList  />
       <ProductCatalog/>
     </Layout>
